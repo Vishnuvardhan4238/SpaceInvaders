@@ -22,13 +22,13 @@ font30 = pygame.font.SysFont('Constantia', 30)
 font40 = pygame.font.SysFont('Constantia', 40)
 
 # Load sounds
-explosion_fx = pygame.mixer.Sound("C:/Users/eagle/Downloads/img_explosion.wav")
+explosion_fx = pygame.mixer.Sound("img_explosion.wav")  #Give Path
 explosion_fx.set_volume(0.25)
 
-explosion2_fx = pygame.mixer.Sound("C:/Users/eagle/Downloads/explosion2.wav")
+explosion2_fx = pygame.mixer.Sound("explosion2.wav")   #Give Path
 explosion2_fx.set_volume(0.25)
 
-laser_fx = pygame.mixer.Sound("C:/Users/eagle/Downloads/laser.wav")
+laser_fx = pygame.mixer.Sound("laser.wav")   #Give Path
 laser_fx.set_volume(0.25)
 
 # Define game variables
@@ -46,7 +46,7 @@ green = (0, 255, 0)
 white = (255, 255, 255)
 
 # Load background image
-bg = pygame.image.load("C:/Users/eagle/Downloads/bg.png")
+bg = pygame.image.load("bg.png")  #Give Path
 
 def draw_bg():
     screen.blit(bg, (0, 0))
@@ -60,7 +60,7 @@ def draw_text(text, font, text_col, x, y):
 class Spaceship(pygame.sprite.Sprite):
     def __init__(self, x, y, health):
         super().__init__()
-        self.image = pygame.image.load("C:/Users/eagle/Downloads/spaceship.png")
+        self.image = pygame.image.load("spaceship.png")   #Give Path
         self.rect = self.image.get_rect()
         self.rect.center = [x, y]
         self.health_start = health
@@ -115,7 +115,7 @@ class Bullets(pygame.sprite.Sprite):
 class Aliens(pygame.sprite.Sprite):
     def __init__(self, x, y):
         super().__init__()
-        self.image = pygame.image.load("C:/Users/eagle/Downloads/alien" + str(random.randint(1, 5)) + ".png")
+        self.image = pygame.image.load("alien" + str(random.randint(1, 5)) + ".png")   #Give Path
         self.rect = self.image.get_rect()
         self.rect.center = [x, y]
         self.move_counter = 0
@@ -131,7 +131,7 @@ class Aliens(pygame.sprite.Sprite):
 class Alien_Bullets(pygame.sprite.Sprite):
     def __init__(self, x, y):
         super().__init__()
-        self.image = pygame.image.load("C:/Users/eagle/Downloads/alien_bullet.png")
+        self.image = pygame.image.load("alien_bullet.png")   #Give Path
         self.rect = self.image.get_rect()
         self.rect.center = [x, y]
 
