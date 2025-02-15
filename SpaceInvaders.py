@@ -98,7 +98,7 @@ class Spaceship(pygame.sprite.Sprite):
 class Bullets(pygame.sprite.Sprite):
     def __init__(self, x, y):
         super().__init__()
-        self.image = pygame.image.load("C:/Users/eagle/Downloads/bullet.png")
+        self.image = pygame.image.load("bullet.png")  #Give Path
         self.rect = self.image.get_rect()
         self.rect.center = [x, y]
 
